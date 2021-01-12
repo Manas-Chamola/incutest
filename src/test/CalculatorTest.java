@@ -4,6 +4,7 @@ import dev.Calculator;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 public class CalculatorTest {
 
@@ -35,6 +36,18 @@ public class CalculatorTest {
     @Test
     public void acceptCustomDelimiterSyntax(){
         assertEquals(3, Calculator.add("//;\\n1;2"));
+    }
+
+    @Test
+    public void raiseExceptionIfNegatives(){
+        try {
+            Calculator.add("-1,2,3");
+            fail("Exception");
+        }
+        catch(RuntimeException runtimeException){
+            System.out.println("An exception was raised");
+        }
+
     }
 
 }
