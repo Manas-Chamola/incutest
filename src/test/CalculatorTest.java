@@ -11,4 +11,9 @@ public class CalculatorTest {
     public void returnZeroIfEmpty(){
         assertEquals(0, Calculator.add(""));
     }
+
+    @Test
+    public void returnNumberIfNumber(){
+        assertEquals(5, Calculator.add("5"));
+    }
 }
