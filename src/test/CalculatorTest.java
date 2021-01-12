@@ -21,4 +21,9 @@ public class CalculatorTest {
     public void returnSumOfNumbersIfSeparatedByCommas(){
         assertEquals(8, Calculator.add("1,7"));
     }
+
+    @Test
+    public void returnSumOfMultipleNumbersIfSeparatedByCommas(){
+        assertEquals(29, Calculator.add("1,7,10,11"));
+    }
 }
