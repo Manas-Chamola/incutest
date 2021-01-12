@@ -6,7 +6,7 @@ public class Calculator {
         if(str.equals("")) {
             return 0;
         }
-        else if(str.contains("\n")){
+        else if(str.contains("\n")||str.contains("\\n")){
             String nums=extractInt(str);
             String data[]=nums.split(" ");
             return sumNumbers(data);
