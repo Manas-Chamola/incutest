@@ -50,4 +50,9 @@ public class CalculatorTest {
 
     }
 
+    @Test
+    public void ignoreNumberIfMoreThan1000(){
+        assertEquals(18, Calculator.add("4,1007,1002,11,3"));
+    }
+
 }

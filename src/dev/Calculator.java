@@ -42,8 +42,11 @@ public class Calculator {
 
     static int sumNumbers(String [] vals){
         int total=0;
-        for(int i=0; i<vals.length; i++)
-            total+=Integer.parseInt(vals[i]);
+        for(int i=0; i<vals.length; i++) {
+            if(Integer.parseInt(vals[i])<1001) {
+                total += Integer.parseInt(vals[i]);
+            }
+        }
         return total;
     }
 
